@@ -516,8 +516,8 @@ def Inception_Inflated3d(include_top=True,
         h = int(x.shape[2])
         w = int(x.shape[3])
         f = int(x.shape[1])
-        x = AveragePooling3D((f, h, w), strides=(1, 1, 1), padding='valid', name='global_avg_pool')(x)
-       # x = AveragePooling3D((f, 1, 1), strides=(1, 1, 1), padding='valid', name='global_avg_pool2')(x)
+        x = AveragePooling3D((1, h, w), strides=(1, 1, 1), padding='valid', name='global_avg_pool')(x)
+        x = MaxPooling3D((f, 1, 1), strides=(1, 1, 1), padding='valid', name='frame_max_pool')(x)
         x = Flatten()(x)
 
 

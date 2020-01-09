@@ -23,8 +23,8 @@ def read_annotation_file(categoryName):
     for line in lines:
 
         line = line.rstrip('\n')
-        elems = line.split('    ');
-
+        elems = line.split('    ')
+        
         annotationInfo.get('filename').append(elems[0])
         annotationInfo.get('startTime').append(elems[1])
         annotationInfo.get('endTime').append(elems[2])
