@@ -18,7 +18,3 @@ def resize_videos(categoryName):
                 
             commandToExecute = 'ffmpeg -i \'' + inputFile + '\' -vf scale=' + VIDEO_HEIGHT + ':' + VIDEO_WIDTH + ' \'' + outputFile + '\''
             os.system(commandToExecute)
-
-
-
-
